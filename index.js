@@ -7,7 +7,7 @@ const cors = require('cors');
 // initiliazing express
 const app = express();
 
-const port = 5000;
+const port = process.env.PORT || 5000;
 
 // this will parse JSON data to javascript
 app.use(express.json());
