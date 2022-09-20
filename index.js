@@ -1,7 +1,6 @@
 // importing express
 const express = require('express');
 const userRouter = require('./Routers/userRouter');
-const videoRouter = require('./Routers/videoRouter');
 const cors = require('cors');
 
 // initiliazing express
@@ -15,7 +14,6 @@ app.use(cors({ origin : [ 'http://localhost:3000' ]}));
 
 // middleware : to process request and do not send response.
 app.use('/user', userRouter);
-app.use('/video', userRouter);
 
 // route : to process request and send response.
 app.get( '/', (req, res) => {
