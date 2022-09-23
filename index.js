@@ -1,6 +1,7 @@
 // importing express
 const express = require('express');
 const userRouter = require('./Routers/userRouter');
+const fileRouter = require('./Routers/fileRouter');
 const utilRouter = require('./Routers/Util');
 const cors = require('cors');
 
@@ -16,6 +17,7 @@ app.use(cors({ origin : [ 'http://localhost:3000' ]}));
 // middleware : to process request and do not send response.
 app.use('/user', userRouter);
 app.use('/util', utilRouter);
+app.use('/file', fileRouter);
 
 // route : to process request and send response.
 app.get( '/', (req, res) => {
